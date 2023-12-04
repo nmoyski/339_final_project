@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|IM+Fell+French+Canon&effect=shadow-multiple">
+    <link rel="icon" href="images/plane.png">
+</head>
+
+<body>
+    <a href = "#main" id = "skip">Skip to Main Content</a>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="barcelona.html">Barcelona</a></li>
+            <li><a class="clicked" href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="images/cloud.png" alt="Cloud image" class="cloud"/>
+        <h1 class="font-effect-shadow-multiple">About Me</h1>
+        <img src="images/cloud.png" alt="Cloud image" class="cloud"/>
+    </header>
+
+    <main id = "main">
+
+        <div class="scene">
+            <div class="actor">
+              <div id="introduction" class="actor__content"></div>
+            </div>
+            <p class="abt">Hey there, fellow adventurers! I'm Nina, the wandering soul behind this travel escapade. Passionate about exploring new cultures, uncovering hidden gems, and embracing the beauty of this world, I've embarked on a journey to share my travel tales and discoveries with you. From savoring delectable cuisines to diving into the heart of vibrant festivals, I believe in capturing the essence of each destination. Join me on this journey as we traverse through breathtaking landscapes, unravel the secrets of diverse cultures, and embark on unforgettable adventures together!</p>
+            <div class="actor">
+              <div id="background" class="actor__content"></div>
+            </div>
+            <p class="abt">I've just started my journey into the world of travel blogging this semester but I've documented quick posts about each trip on my home page! You can filter the posts by country or scroll through each one in chronological order. Additionally, I have a featured page that highlights a specific trip that I plan on updating! Right now my featured post is about my study abroad trip to Barcelona.</p>
+            <div class="actor">
+                <div id="mission" class="actor__content"></div>
+              </div>
+              <p class="abt">My goal with this blog is to inspire and empower fellow travelers to embark on transformative journeys, fostering a deeper connection with the world around us. We strive to curate engaging content that not only highlights the beauty of diverse destinations but also celebrates cultural richness, promotes sustainable travel practices, and encourages immersive experiences. Through storytelling, insightful guides, and a passion for exploration, we aim to ignite a sense of wanderlust while advocating for responsible and meaningful travel, leaving a positive impact on both travelers and the places they visit.</p>
+        </div>
+        <p><br><br></p>
+        <div class="plane"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/theaterjs/dist/theater.min.js"></script>
+    <script>
+        var theater = theaterJS()
+
+        theater
+        .on('type:start, erase:start', function () {
+            theater.getCurrentActor().$element.classList.add('actor__content--typing')
+        })
+        .on('type:end, erase:end', function () {
+            theater.getCurrentActor().$element.classList.remove('actor__content--typing')
+        })
+
+        theater
+        .addActor('introduction', { speed: 0.8, accuracy: 0.6 })
+        .addActor('background')
+        .addActor('mission')
+        .addScene('introduction:Introduction', 400)
+        .addScene('background:Background', 400)
+        .addScene('mission:My Mission', 400)
+        //.addScene(theater.replay.bind(theater))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+/*
+Color palette:
+- light blue: #DCEBF5
+- medium blue: #4F5D75
+- dark blue: #2D3142
+- light green: #e9f5e9
+- green: #77AD78
+- dark green: #6F8F72
+*/
+@import '//fonts.googleapis.com/css?family=Cutive';
+
+body {
+    background-color: #dcebf5;
+    color: #4F5D75;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+
+h1{
+    color:#2D3142;
+    text-align: center;
+    font-size: 55px;
+    font-family: "Sofia", Arial;
+}
+
+h2{
+    text-align: center;
+    color: #4F5D75;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+h3{
+    text-align: center;
+    color: #4F5D75;
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'IM Fell French Canon', Arial;
+}
+
+nav{
+    text-align: center;
+    background-color:#e9f5e9;
+    border: #4F5D75 solid 5px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav a{
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.clicked{
+    color: #2D3142;
+    font-weight: bolder;
+}
+
+.infodiv{
+    display: grid;
+    grid-template-columns: 1fr; 
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 10px;
+    margin: 10px;
+}
+
+.infodiv div{
+    background-color: #e9f5e9;
+    border: #6F8F72 solid 10px;
+    border-radius: 30px;
+}
+
+button{
+    display:inline-block;
+    border-radius:30px;
+    padding:10px 15px;
+    border: 3px solid #77AD78;
+    text-decoration:none;
+    color: #2D3142;
+    text-align:center;
+    font-size: medium;
+    margin:5px;
+    background-color: #e9f5e9;
+    width: 130px;
+}
+
+button:hover{
+    background-color: #77AD78;
+    color: #2D3142;
+    border: #6F8F72 solid 3px;
+}
+
+img{
+    border-radius: 30px;
+    background-color: white;
+    border: #77AD78 solid 10px;
+    width: 90%;
+}
+
+p{
+    line-height: 22px;
+    margin: 15px;
+}
+
+.infodiv div:hover {
+    color: #415A5F;
+    animation-name: color-shift;
+    animation-duration: 10s;
+  }
+  
+  @keyframes color-shift {
+    0% {border: #6F8F72 solid 10px; }
+    50% {border: #2D3142 solid 10px;}
+    100% {border: #6F8F72 solid 10px; }
+  }
+
+.currentpage{
+    background-color: white;
+    padding: 5px;
+    color: #415A5F;
+    border: 2px solid #415A5F;
+    border-radius: 30px;
+    font-weight: bolder;
+}
+
+#skip{
+    margin-top: 25px;
+    position: absolute;
+    left: -500px;
+}
+
+#skip:focus{
+    left: 100px;
+}
+
+.animation {
+    font-size: 50px;
+    animation: move 1s infinite linear alternate;
+    text-align: center;
+  }
+  @keyframes move {
+    to { transform: rotate(360deg); }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .animation { animation: none; }
+    .gif {display: none;}
+    h2:hover { animation: none;}
+  }
+
+ul{
+  list-style-type: square;
+  margin: 10px;
+  padding: 10px;
+}
+
+ol{
+    list-style-type: decimal;
+    margin: 10px;
+    padding: 10px;
+}
+
+.barc{
+    background-color: #e9f5e9;
+    border: #6F8F72 solid 10px;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: left;
+}
+
+.abt{
+    background-color: #e9f5e9;
+    border: #6F8F72 solid 10px;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: left;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("/images/img_parallax8.jpeg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.scene {
+    margin: 0 auto;
+  }
+  
+  .actor {
+    text-align: center;
+    display: flex;
+    color: #4F5D75;
+    font-size: 35px;
+    margin-bottom: 5px;
+    font-family: 'Cutive', serif;
+    line-height: 1.4;
+  }
+  
+  .actor__content {
+    flex-grow: 1;
+  }
+  
+  @keyframes blink {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .actor__content--typing::after {
+    content: '|';
+    animation: blink 500ms infinite;
+  }
+
+  .barcdiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 10px;
+    margin: 10px;
+    align-items: center;
+    background-image: url("/images/tan-background.jpeg");
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    border: #2D3142 solid 5px;
+}
+
+.barcdiv img{
+    background-color: #e9f5e9;
+    border: #6F8F72 solid 10px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.barcdiv img:hover{
+    border: #2D3142 solid 10px;
+}
+
+.cloud{
+    background-color: #DCEBF5;
+    border: none;
+    display: block;
+    width: 35%;
+}
+
+.plane{
+    /* The image used */
+    background-image: url("/images/plane.jpeg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .infodiv{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        justify-content: center;
+        row-gap: 10px;
+        column-gap: 10px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .infodiv{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        justify-content: center;
+        row-gap: 10px;
+        column-gap: 10px;
+        margin: 10px;
+    }
+}
+
