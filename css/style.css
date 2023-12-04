@@ -184,7 +184,7 @@ ol{
 
 .parallax {
     /* The image used */
-    background-image: url("/images/img_parallax8.jpeg");
+    background-image: url("images/img_parallax8.jpeg");
   
     /* Set a specific height */
     min-height: 500px; 
@@ -232,7 +232,7 @@ ol{
     column-gap: 10px;
     margin: 10px;
     align-items: center;
-    background-image: url("/images/tan-background.jpeg");
+    background-image: url("images/tan-background.jpeg");
     border-radius: 30px;
     padding: 20px;
     text-align: center;
@@ -259,7 +259,7 @@ ol{
 
 .plane{
     /* The image used */
-    background-image: url("/images/plane.jpeg");
+    background-image: url("images/plane.jpeg");
   
     /* Set a specific height */
     min-height: 500px; 
